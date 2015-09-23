@@ -16,6 +16,7 @@ stop int unsigned not null,
 name varchar(100) not null
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 load data local infile 'pombase_gene_load' into table pombase_gene;
+load data local infile 'genename' into table pombase_gene;
 create index name on pombase_gene (name);
 
 
