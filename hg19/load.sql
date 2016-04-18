@@ -7,16 +7,19 @@ refgene char(100) not null
 );
 load data local infile 'kegg2refgene' into table kegg2refgene;
 
+*/
 drop table if exists gencodeV17;
-create table gencodeV17 (   
+
+
+drop table if exists gencodeV19;
+create table gencodeV19 (   
 chrom varchar(20) not null,
 start int unsigned not null,
 stop int unsigned not null,
 name varchar(100) not null
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-load data local infile 'gencodeV17_load' into table gencodeV17;
-create index name on gencodeV17 (name);
-*/
+load data local infile 'gencodeV19_load' into table gencodeV19;
+create index name on gencodeV19 (name);
 
 drop table if exists refGene;
 create table refGene (
